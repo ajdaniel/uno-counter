@@ -1,0 +1,30 @@
+<div class="md-display-4 count">{{$ctrl.model.count}}
+    <aside ng-if="$ctrl._4k">{{$ctrl.get4kNumber()}}</aside> 
+</div>
+<div class="checkboxes">
+    <md-checkbox ng-model="$ctrl.advanced">Advanced</md-checkbox>
+    <md-checkbox ng-model="$ctrl.icons">Icons</md-checkbox>
+    <md-checkbox ng-model="$ctrl._4k">4k</md-checkbox>
+</div>
+<md-divider></md-divider>
+<div class="buttons">
+    <div ng-if="$ctrl.icons">
+    <md-button class="md-fab md-primary" aria-label="Donkey Kong" ng-click="$ctrl.model.addDonkeyKong()">
+        <img src="http://www.mariowiki.com/images/4/41/DonkeyKongIcon-MSM.png" />
+    </md-button>
+    x {{$ctrl.model.dkCount}}
+    <md-button ng-disabled="!$ctrl.model.canFreeForAll()" class="md-fab md-primary" aria-label="Free For All" ng-click="$ctrl.model.addFFA()">
+        <img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/128/action.png" />
+    </md-button>
+    x {{$ctrl.model.ffaCount}}
+    <md-button class="md-fab md-primary" aria-label="Full DK" ng-click="$ctrl.fullDK()">
+        FullDK
+    </md-button>
+    </div>
+    <md-button ng-if="!$ctrl.icons" class="md-raised md-primary" ng-click="$ctrl.model.addDonkeyKong()">Donkey Kong ({{$ctrl.model.dkCount}})</md-button>
+    <md-button ng-if="!$ctrl.icons" ng-disabled="!$ctrl.model.canFreeForAll()" class="md-raised md-primary" ng-click="$ctrl.model.addFFA()">Free for All  ({{$ctrl.model.ffaCount}})</md-button>
+    <md-button ng-if="!$ctrl.icons" class="md-raised md-primary" ng-click="$ctrl.fullDK()">Full DK</md-button>
+    <md-button ng-if="$ctrl.advanced" class="md-raised md-primary" ng-click="$ctrl.model.addAdvanced(2)">+2</md-button>
+    <md-button ng-if="$ctrl.advanced" class="md-raised md-primary" ng-click="$ctrl.model.addAdvanced(4)">+4</md-button>
+    <md-button class="md-raised md-warn" ng-click="$ctrl.model.clearCount()">Reset</md-button>
+</div>
