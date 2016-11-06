@@ -10,10 +10,10 @@
 <div class="buttons">
     <div ng-if="$ctrl.icons">
     <md-button class="md-fab md-primary" aria-label="Donkey Kong" ng-click="$ctrl.model.addDonkeyKong()">
-        <img ng-src="/images/donkeykong.png" />
+        <img src="images/donkeykong.png" />
     </md-button>
     x {{$ctrl.model.dkCount}}
-    <md-button ng-disabled="!$ctrl.model.canFreeForAll()" class="md-fab md-primary" aria-label="Free For All" ng-click="$ctrl.model.addFFA()">
+    <md-button ng-disabled="!$ctrl.model.canFreeForAll()" class="md-fab md-primary ffa" aria-label="Free For All" ng-click="$ctrl.model.addFFA()">
         <span>✋</span>
     </md-button>
     x {{$ctrl.model.ffaCount}}
