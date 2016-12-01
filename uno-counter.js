@@ -14,12 +14,22 @@
             this.get4kNumber = function () {
                 return Math.floor(this.model.count / 4) + 1;
             };
+            this._lastbutton = '';
             this.fullDK = function () {
                 this.model.addDonkeyKong();
                 this.model.addFFA();
                 this.model.addFFA();
                 this.model.addFFA();
+                this._lastbutton = 'fdk';
             };
+            this.addDK = function () {
+                this.model.addDonkeyKong();
+                this._lastbutton = 'dk';
+            }
+            this.addFFA = function () {
+                this.model.addFFA();
+                this._lastbutton = 'ffa';
+            }
         }
     });
 
