@@ -20,6 +20,11 @@ uno-counter .count {
     font-size: 7em;
 }
 
+uno-counter .md-button.pressed {
+    border: 2px solid red;
+    padding: 2px;
+}
+
 uno-counter .md-button.md-fab {
     width: 60px;
     height: 60px;
