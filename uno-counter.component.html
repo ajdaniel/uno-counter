@@ -9,22 +9,24 @@
 <md-divider></md-divider>
 <div class="buttons">
     <div ng-if="$ctrl.icons">
-    <md-button class="md-fab md-primary" ng-class="{pressed:$ctrl._lastbutton==='dk'}" aria-label="Donkey Kong" ng-click="$ctrl.addDK()">
-        <img src="images/donkeykong.png" />
-    </md-button>
-    x {{$ctrl.model.dkCount}}
-    <md-button ng-disabled="!$ctrl.model.canFreeForAll()" class="md-fab md-primary ffa" ng-class="{pressed:$ctrl._lastbutton==='ffa'}" aria-label="Free For All" ng-click="$ctrl.addFFA()">
-        <span>✋</span>
-    </md-button>
-    x {{$ctrl.model.ffaCount}}
-    <md-button class="md-fab md-primary" ng-class="{pressed:$ctrl._lastbutton==='fdk'}" aria-label="Full DK" ng-click="$ctrl.fullDK()">
-        FullDK
-    </md-button>
+        <md-button class="md-fab md-primary" ng-class="{pressed:$ctrl._lastbutton==='dk'}" aria-label="Donkey Kong" ng-click="$ctrl.addDK()">
+            <img src="images/donkeykong.png" />
+        </md-button>
+        x {{$ctrl.model.dkCount}}
+        <md-button ng-disabled="!$ctrl.model.canFreeForAll()" class="md-fab md-primary ffa" ng-class="{pressed:$ctrl._lastbutton==='ffa'}" aria-label="Free For All" ng-click="$ctrl.addFFA()">
+            <span>✋</span>
+        </md-button>
+        x {{$ctrl.model.ffaCount}}
+        <md-button class="md-fab md-primary" ng-class="{pressed:$ctrl._lastbutton==='fdk'}" aria-label="Full DK" ng-click="$ctrl.fullDK()">
+            FullDK
+        </md-button>
     </div>
+    
     <md-button ng-if="!$ctrl.icons" class="md-raised md-primary" ng-class="{pressed:$ctrl._lastbutton==='dk'}" ng-click="$ctrl.model.addDonkeyKong()">Donkey Kong ({{$ctrl.model.dkCount}})</md-button>
     <md-button ng-if="!$ctrl.icons" ng-disabled="!$ctrl.model.canFreeForAll()" class="md-raised md-primary" ng-class="{pressed:$ctrl._lastbutton==='ffa'}" ng-click="$ctrl.model.addFFA()">Free for All  ({{$ctrl.model.ffaCount}})</md-button>
     <md-button ng-if="!$ctrl.icons" class="md-raised md-primary" ng-class="{pressed:$ctrl._lastbutton==='fdk'}" ng-click="$ctrl.fullDK()">Full DK</md-button>
     <md-button ng-if="$ctrl.advanced" class="md-raised md-primary" ng-click="$ctrl.model.addAdvanced(2)">+2</md-button>
     <md-button ng-if="$ctrl.advanced" class="md-raised md-primary" ng-click="$ctrl.model.addAdvanced(4)">+4</md-button>
-    <md-button class="md-raised md-warn" ng-click="$ctrl.model.clearCount()">Reset</md-button>
+    
+    <md-button class="md-raised md-warn" ng-click="$ctrl.clearCount()">Reset</md-button>
 </div>
