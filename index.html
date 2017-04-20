@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UNO Counter</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="apple-touch-icon" href="iosIcon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <link rel="manifest" href="manifest.json">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+  
+    <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+    
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a ng-init="showChanges = false" ng-click="showChanges = !showChanges">changes</a>
+    <md-card class="changelog" md-theme="default" ng-if="showChanges" ng-cloak>
+      <ul>
+        <li>0.7 - Option for a 4k penalty</li>
+        <li>0.6 - Moved to <a href="http://home.andrewdaniel.co.uk/uno/">new home!</a></li>
+        <li>0.5 - Added a changelog</li>
+        <li>0.4 - Added DK and FFA count</li>
+        <li>0.3 - Added Icons</li>
+        <li>0.2 - Added plus numbers</li>
+        <li>0.1 - initial creation</li>
+      </ul>
+    </md-card>
+    <uno-counter></uno-counter>
+    <script src="./uno-counter.js"></script>
+  </body>
+
+</html>

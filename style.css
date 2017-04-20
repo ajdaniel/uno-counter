@@ -1,0 +1,52 @@
+uno-counter {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+uno-counter md-checkbox {
+    align-self: center;
+}
+
+uno-counter .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+uno-counter .count {
+    font-size: 7em;
+}
+
+uno-counter .md-button.pressed {
+    border: 2px solid red;
+    padding: 2px;
+}
+
+uno-counter .md-button.md-fab {
+    width: 60px;
+    height: 60px;
+    padding-top: 4px;
+}
+
+uno-counter .md-button.md-fab img {
+    width: 48px;
+    height: 48px;
+}
+
+.changelog {
+    position: absolute;
+    width: calc(100% - 25px);
+}
+
+.count aside {
+    display: inline;
+    font-size: 0.5em;
+    vertical-align: super;
+}
+
+.ffa span {
+    font-size: 3em;
+}

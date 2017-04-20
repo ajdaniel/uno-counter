@@ -1,0 +1,14 @@
+{
+  "name": "UNO Counter",
+  "icons": [
+    {
+      "src": "iosicon.png",
+      "sizes": "320x320",
+      "type": "image/png",
+      "density": 1
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}
